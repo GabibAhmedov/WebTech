@@ -1,0 +1,28 @@
+main > .container {
+  padding: 60px 15px 0;
+}
+
+
+.question {
+  border: 3px solid darkblue;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 5px;
+  border-color: coral;
+}
+#nav1 {
+  background-color:yellow;
+}
+#AskButton{
+  width: 150px;
+  margin-right: 300px;
+  background-color: lightgreen;
+  color:black;
+  border-color: #0dcaf0;
+}
+
+.avatar-question{
+      width: 115px;
+    height: 130px;
+    border: 5px;
+}
