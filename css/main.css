@@ -1,28 +1,45 @@
 main > .container {
-  padding: 60px 15px 0;
+    padding: 60px 15px 0;
 }
 
 
 .question {
-  border: 3px solid darkblue;
-  padding: 10px;
-  margin: 20px;
-  border-radius: 5px;
-  border-color: coral;
-}
-#nav1 {
-  background-color:yellow;
-}
-#AskButton{
-  width: 150px;
-  margin-right: 300px;
-  background-color: lightgreen;
-  color:black;
-  border-color: #0dcaf0;
+    border: 3px solid darkblue;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    border-color: coral;
 }
 
-.avatar-question{
-      width: 115px;
+#nav1 {
+    background-color: yellow;
+}
+
+#AskButton {
+    width: 150px;
+    margin-right: 600px;
+    background-color: lightgreen;
+    color: black;
+    border-color: #0dcaf0;
+}
+
+.avatar-question {
+    width: 115px;
     height: 130px;
-    border: 5px;
+    border: 3px solid;
+    border-color: #146c43;
+}
+
+.avatar-base {
+    width: 60px;
+    hight: 60px;
+    border: 2px solid;
+    border-color: #146c43;
+    margin-right: 50px;
+}
+
+#Username {
+    font-size: 21px;
+    color: brown;
+    margin-left: 50px;
 }
