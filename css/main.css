@@ -33,10 +33,37 @@ main > .container {
 .tags h5  {
     margin-right: 5px;
 }
-.tags a{
+.tags a {
     text-decoration: none;!important
     border: none !important;
 }
+
+.bi{
+font-size: 20px;
+}
+
+.Like {
+    text-decoration: none !important;
+    border: 1px black solid !important;
+    border-radius: 10px;
+    color: #1a1e21;
+    background-color: white;
+
+
+}
+
+.LikeSection {
+    border: 2px black solid !important;
+    border-radius: 7px;
+    padding: 0px;
+    margin-left: 4px;
+    margin-right:4px;
+    padding-top:4px ;
+    padding-bottom:4px ;
+}
+
+
+
 .avatar-base {
     width: 60px;
     hight: 60px;
