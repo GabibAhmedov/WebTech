@@ -20,7 +20,8 @@ main > .container {
     margin-right: 600px;
     background-color: lightgreen;
     color: black;
-    border-color: #0dcaf0;
+    border-color: #0dcaf0
+
 }
 
 .avatar-question {
@@ -29,17 +30,26 @@ main > .container {
     border: 3px solid;
     border-color: #146c43;
 }
-
+.tags h5  {
+    margin-right: 5px;
+}
+.tags a{
+    text-decoration: none;!important
+    border: none !important;
+}
 .avatar-base {
     width: 60px;
     hight: 60px;
     border: 2px solid;
     border-color: #146c43;
-    margin-right: 50px;
+    margin-left: 50px;
 }
 
+.pagination{
+    margin-left: 30px;
+}
 #Username {
     font-size: 21px;
     color: brown;
-    margin-left: 50px;
+    margin-right: 20px;
 }
