@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
 
     <style>
@@ -36,7 +37,7 @@
 
 <header>
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark  bg-dark">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-gradient " id="nav1">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Bee-garden</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -45,18 +46,25 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <img class="avatar-base" src="img/Pchela2.jpeg" alt="">
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" id="Username" href="#">Bee #1273</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link" href="#">Log out</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Settings</a>
                     </li>
                 </ul>
+
+                <a href="ask.html" class="btn btn-primary btn-lg " role="button" aria-disabled="true" id="AskButton">Ask</a>
+
                 <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-4" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
@@ -69,13 +77,34 @@
     <div class="container">
         <div class="row justify-content-end">
 
-        <!-- Unique content for each page-->
-
-            <div class="col-3">
+            <div class="col-3 tags">
                 <h2 class="mt-5">Popular Tags</h2>
-            </div>
-        </div>
+                <div class="d-flex">
+                    <a href=""> <h5 style="color: #fd7e14">Bee </h5></a>
+                    <a href=""> <h5 style="color: darkred">Honey </h5></a>
+                    <a href=""> <h5 style="color: mediumpurple">Flower </h5></a>
+                    <a href=""> <h5>Hive </h5></a>
+                </div>
+                <div class="d-flex">
+                    <a href=""><h5 style="color: mediumpurple">Sting </h5></a>
+                    <a href=""> <h5>Foam </h5></a>
+                    <a href=""> <h5>Foam </h5></a>
+                    <a href=""> <h5>Foam </h5></a>
+                </div>
 
+                <h2 class="mt-5">Best Members</h2>
+                 <div class="d-block">
+                    <a href=""> <h5 style="color: #fd7e14">Bee 2 </h5></a>
+                    <a href=""> <h5 style="color: darkred">Bee 3 </h5></a>
+                    <a href=""> <h5 style="color: mediumpurple">Bee 1 </h5></a>
+                    <a href=""> <h5>Bee 4 </h5></a>
+                </div>
+
+            </div>
+
+
+<!--            Unique content-->
+        </div>
     </div>
 </main>
 
@@ -91,3 +120,4 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
+
