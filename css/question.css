@@ -1,0 +1,100 @@
+main > .container {
+    padding: 60px 15px 0;
+}
+
+
+.question {
+    border: 3px solid darkblue;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    border-color: coral;
+}
+
+#nav1 {
+    background-color: yellow;
+}
+
+#AskButton {
+    width: 150px;
+    margin-right: 600px;
+    background-color: lightgreen;
+    color: black;
+    border-color: #0dcaf0
+
+}
+
+.avatar-question {
+    width: 115px;
+    height: 130px;
+    border: 3px solid;
+    border-color: #146c43;
+}
+
+.correctness{
+    font-size: 20px;
+}
+
+.avatar-answer {
+    width: 80px;
+    height: 100px;
+    border: 2px solid;
+    border-color: #146c43;
+}
+
+#answerInput{
+    margin-left: 20px;
+    border: 4px solid crimson;
+    border-radius:3px;
+}
+#answerButton{
+    margin-left: 20px;
+}
+.tags h5  {
+    margin-right: 5px;
+}
+.tags a {
+    text-decoration: none;!important
+    border: none !important;
+}
+
+.bi{
+font-size: 20px;
+}
+
+.Like {
+    text-decoration: none !important;
+    border: 1px black solid !important;
+    border-radius: 10px;
+    color: #1a1e21;
+    background-color: white;
+
+
+}
+
+.LikeSection {
+    border: 2px black solid !important;
+    border-radius: 7px;
+    padding: 0px;
+    margin-left: 4px;
+    margin-right:4px;
+    padding-top:4px ;
+    padding-bottom:4px ;
+}
+
+.avatar-base {
+    width: 60px;
+    hight: 60px;
+    border: 2px solid;
+    border-color: #146c43;
+    margin-left: 50px;
+}
+
+.pagination{
+    margin-left: 30px;
+}
+#Username {
+    font-size: 21px;
+    color: brown;
+    margin-right: 20px;
+}
