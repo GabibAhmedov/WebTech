@@ -24,7 +24,7 @@ urlpatterns = [
     path('question/', include("app.urls")),
     path('hot/', views.hot, name="ask"),
     path('tag/<str:s>', views.tag, name="ask"),
-    path('singup', views.signup, name="signup"),
+    path('signup', views.signup, name="signup"),
     path('login', views.login, name="login"),
 
 ]

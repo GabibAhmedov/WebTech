@@ -2,6 +2,7 @@ import string
 from random import random, randrange
 
 from django.shortcuts import render
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
 # Create your views here.
 
@@ -10,7 +11,7 @@ QUESTIONS = [
         "title": f"Title #{i}",
         "text": f"This is text for question #{i}",
         "number": i,
-    } for i in range(10)
+    } for i in range(100)
 
 ]
 
@@ -39,8 +40,17 @@ HOT_QUESTIONS= [
 ]
 
 
+
+def paginate(objects_list, request, per_page=10):
+    question_paginator = Paginator(objects_list, per_page)
+    page_num = request.GET.get('page')
+    page = question_paginator.get_page(page_num)
+    return page
+
+
 def index(request):
-    return render(request, "index.html", {"questions": QUESTIONS})
+    page = paginate(QUESTIONS,request)
+    return render(request, "index.html", {"questions": QUESTIONS, "page": page})
 
 
 def tag(request, s: string):
