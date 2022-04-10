@@ -1,0 +1,36 @@
+{% load static %}
+<div class="row question answer">
+    <div class="col-2">
+        <img class="avatar-answer" src="{% static "img/Pchela.jpg" %}" alt="">
+    </div>
+    <div class="col-10">
+        <h3><a href="question.html">{{ answer.title }}</a></h3>
+        <p>{{ answer.text }}</p>
+        <div class="row d-flex">
+            <div class="col-3">
+                <h5>Replies (5)</h5>
+            </div>
+            <div class="col-auto correctness">
+                <input type="checkbox" class="correctness" name="Correctness"
+                       unchecked>
+                <label>Correct</label>
+            </div>
+            <div class="col-md-auto row LikeSection">
+                <div class="col-md-auto">
+                    <button class="Like"><i class="bi bi-hand-thumbs-up"></i></button>
+                </div>
+                <div class="col-md-auto">
+                    <h5> 5</h5>
+                </div>
+            </div>
+            <div class="col-md-auto row LikeSection">
+                <div class="col-md-auto">
+                    <button class="Like"><i class="bi bi-hand-thumbs-down"></i></button>
+                </div>
+                <div class="col-md-auto">
+                    <h5> 1</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
