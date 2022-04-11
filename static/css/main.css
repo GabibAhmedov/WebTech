@@ -30,6 +30,17 @@ main > .container {
     border: 3px solid;
     border-color: #146c43;
 }
+
+.avatar-settings {
+    width: 115px;
+    height: 130px;
+    padding: 0;
+    margin-left: 430px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 3px solid;
+    border-color: #146c43;
+}
 .tags h5  {
     margin-right: 5px;
 }
