@@ -75,29 +75,29 @@
                     <p style="color: #b02a37">Sorry, this email address is already taken!</p>
 
                      <div class="form-floating">
-                        <input class="form-control" id="floatingLogin"  placeholder="Login">
+                        <input class="form-control" id="floatingLogin"  placeholder="Login" maxlength="30" required>
                         <label for="floatingLogin">Login</label>
                     </div>
                     <br>
 
                      <div class="form-floating">
-                        <input  class="form-control"  id="floatingEmail" placeholder="Email">
+                        <input  class="form-control" pattern=".+@mail\.ru" id="floatingEmail" placeholder="Email" maxlength="30" required>
                         <label for="floatingEmail">Email</label>
                     </div>
                     <br>
                      <div class="form-floating">
-                        <input type="password" class="form-control"  placeholder="Password">
+                        <input type="password" class="form-control"  placeholder="Password" maxlength="30" required>
                         <label for="floatingPassword">Password</label>
                     </div>
                     <br>
                     <div class="form-floating">
                         <input type="password" class="form-control" id="floatingRepeatedPassword"
-                               placeholder="Password">
+                               placeholder="Password" maxlength="30" required>
                         <label for="floatingRepeatedPassword">Repeat Password</label>
                     </div>
                     <br>
                     <div class="form-floating">
-                        <input class="form-control" id="floatingNickName" placeholder="NickName">
+                        <input class="form-control" id="floatingNickName" placeholder="NickName" maxlength="30" required>
                         <label for="floatingPassword">NickName</label>
                     </div>
                     <br>
