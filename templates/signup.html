@@ -1,0 +1,57 @@
+
+
+{% extends "inc/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="col-9 form-signin">
+        <form>
+            <img class="mb-4" src="../static/img/beeIcon.jpg" width="72" height="57">
+
+            <h1 class="h3 mb-3 fw-normal ">Registration</h1>
+            <p style="color: #b02a37">Sorry, this email address is already taken!</p>
+
+            <div class="form-floating">
+                <input class="form-control" id="floatingLogin" placeholder="Login">
+                <label for="floatingLogin">Login</label>
+            </div>
+            <br>
+
+            <div class="form-floating">
+                <input class="form-control" id="floatingEmail" placeholder="Email">
+                <label for="floatingEmail">Email</label>
+            </div>
+            <br>
+            <div class="form-floating">
+                <input type="password" class="form-control" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <br>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingRepeatedPassword"
+                       placeholder="Password">
+                <label for="floatingRepeatedPassword">Repeat Password</label>
+            </div>
+            <br>
+            <div class="form-floating">
+                <input class="form-control" id="floatingNickName" placeholder="NickName">
+                <label for="floatingPassword">NickName</label>
+            </div>
+            <br>
+            <div class="row">
+                <h6 for="floatingAvatar" id="AvatarLable">Upload Avatar </h6>
+                <div class="form-floating AvatarForm">
+                    <input type="file" placeholder="Upload Avatar " id="floatingAvatar">
+                </div>
+            </div>
+
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+        </form>
+    </div>
+{% endblock content %}
+
+{% block side_panel %}
+    {% include "inc/side_panel.html" %}
+{% endblock side_panel %}
+
+

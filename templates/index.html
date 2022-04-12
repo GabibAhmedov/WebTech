@@ -1,0 +1,42 @@
+
+{% extends "inc/base.html" %}
+{% load static %}
+
+{% block content %}
+            <div class="col-9">
+                <h2 class="mt-5">Questions</h2>
+
+                {% for question in page.object_list %}
+                    {% include "inc/question.html" %}
+                {% endfor %}
+
+
+                <ul class="pagination">
+                    {% if page.has_previous %}
+                        <li class="page-item"><a class="page-link"
+                                                 href="{% url 'home' %}?page={{ page.previous_page_number }}">Previous</a>
+                        </li>
+                    {% endif %}
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+
+                {% if page.number > 4 %}
+                    <li class="page-item"><a class="page-link" href="{% url 'home' %}?page={{ page.number|add:"-3"}}">{{ page.number|add:"-3"}}</a></li>
+                {% endif %}
+
+
+                    {% if page.has_next %}
+                        <li class="page-item"><a class="page-link"
+                                                 href="{% url 'home' %}?page={{ page.next_page_number }}">Next</a>
+                        </li>
+                    {% endif %}
+
+                <li><p style="margin-left: 15px">Current page:3</p></li>
+                </ul>
+
+            </div>
+{% endblock content %}
+
+{% block side_panel %}
+    {% include "inc/side_panel.html" %}
+{% endblock side_panel %}
+
