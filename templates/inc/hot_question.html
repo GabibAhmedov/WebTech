@@ -14,12 +14,9 @@
             <div class="col-1">
                 <h5> Tags:</h5>
             </div>
-            <div class="col-md-auto">
-                <a href=""><h5>Bee Tag 1</h5></a>
-            </div>
-            <div class="col-md-auto">
-                <a href=""><h5>Bee Tag 2</h5></a>
-            </div>
+            {% for tag in two_tags %}
+                {% include "inc/question_tag.html" %}
+            {% endfor %}
             <div class="col-md-auto row LikeSection">
                 <div class="col-md-auto">
                     <button class="Like"><i class="bi bi-hand-thumbs-up"></i></button>
