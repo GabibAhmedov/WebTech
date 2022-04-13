@@ -9,12 +9,8 @@
                 <img class="avatar-question" src="../static/img/Pchela.jpg" alt="">
             </div>
             <div class="col-10">
-                <h3><a href="question.html">{{ question.title }}</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h3>{{ question.title }}</h3>
+                <p>{{ question.text }}</p>
                 <div class="row">
                     <div class="col-3">
                         <h5>Answers (5)</h5>
@@ -22,12 +18,10 @@
                     <div class="col-1">
                         <h5> Tags:</h5>
                     </div>
-                    <div class="col-md-auto">
-                        <a href=""><h5>Bee Tag 1</h5></a>
-                    </div>
-                    <div class="col-md-auto">
-                        <a href=""><h5>Bee Tag 2</h5></a>
-                    </div>
+                    {% for tag in two_tags %}
+                    {% include "inc/question_tag.html"  %}
+                    {% endfor %}
+
                     <div class="col-md-auto row LikeSection">
                         <div class="col-md-auto">
                             <button class="Like"><i class="bi bi-hand-thumbs-up"></i></button>
@@ -53,10 +47,31 @@
     <div class="col-9">
         <hr size="5px" ; id="delimiter">
 
-        {% for answer in answers %}
+        {% for answer in page.object_list %}
             {% include "inc/answer.html" %}
         {% endfor %}
+        <ul class="pagination">
+            {% if page.has_previous %}
+                <li class="page-item"><a class="page-link"
+                                         href="{% url 'question' index %}?page={{ page.previous_page_number }}">Previous</a>
+                </li>
+            {% endif %}
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
 
+            {% if page.number > 4 %}
+                <li class="page-item"><a class="page-link" href="{% url 'question' index %}?page={{ page.number|add:"-3"}}">
+                    {{ page.number|add:"-3"}}</a></li>
+            {% endif %}
+
+
+            {% if page.has_next %}
+                <li class="page-item"><a class="page-link"
+                                         href="{% url 'question' index %}?page={{ page.next_page_number }}">Next</a>
+                </li>
+            {% endif %}
+
+            <li><p style="margin-left: 15px">Current page: {{ page.number }}</p></li>
+        </ul>
         <hr size="5px" ; id="delimiter2">
         <div class="col-9">
             <textarea placeholder="Input your answer" id="answerInput" cols="90" rows="5"></textarea>

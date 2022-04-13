@@ -4,7 +4,7 @@
 
 {% block content %}
             <div class="col-9">
-                <h2 class="mt-5">Questions</h2>
+                <h2 class="mt-5">Questions with tag: {{ tag }}</h2>
 
                 {% for question in questions %}
                     {% include "inc/tag_specific.html" %}
