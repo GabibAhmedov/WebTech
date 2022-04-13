@@ -5,6 +5,8 @@ import random
 from django.shortcuts import render
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
+from app.models import Question, Tag, Like, Answer, Profile
+
 QUESTIONS = [
     {
         "title": f"Title #{i}",
@@ -89,11 +91,13 @@ def paginate(objects_list, request, per_page=10):
 
 def index(request):
     page = paginate(QUESTIONS, request)
-    return render(request, "index.html", {"questions": QUESTIONS, "page": page, "tags": TAGS,"two_tags": TWO_TAGS})
+    return render(request, "index.html", {"questions": QUESTIONS, "page": page, "tags": TAGS, "two_tags": TWO_TAGS})
 
 
-def tag(request, s: string):
-    return render(request, "tag.html", {"questions": QUESTIONS, "tag": s, "tags": TAGS})
+def tag(request, tag: string):
+    TaggedQuestions = Question.objects.get_tagged_question(tag)
+    page = paginate(TaggedQuestions, request)
+    return render(request, "tag.html", {"questions": TaggedQuestions, "page": page})
 
 
 def ask(request):
@@ -109,11 +113,25 @@ def login(request):
 
 
 def question(request, i: int):
+    specific_question = Question.objects.filter(pk_exact=i)[0]
+
+    answers = Answer.objects.question_answers(question.pk)
+    answers_list = []
+    for answer in answers:
+        a = {
+            "answer": answer,
+            "avatar": Profile.objects.get_avatar(answer.author.pk)
+        }
+    answers_list.append(a)
+
     page = paginate(ANSWERS, request)
+
     return render(request, "question.html",
                   {"question": QUESTIONS[i], "answers": ANSWERS, "tags": TAGS, "page": page, "index": i,
                    "two_tags": TWO_TAGS})
 
 
 def hot(request):
+    hot_questions = Question.objects.get_hot()
+    page = paginate(hot_questions)
     return render(request, "index.html", {"questions": QUESTIONS, "hot_questions": HOT_QUESTIONS, "tags": TAGS})
